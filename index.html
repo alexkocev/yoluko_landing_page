@@ -4,37 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoluko Media - Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="images/yoluko_logo.png" alt="Yoluko Media Logo" class="logo">
+        <img src="images/yoluko_logo_trans.svg" alt="Yoluko Media Logo" class="logo">
         <h1>Welcome to Yoluko Media</h1>
-        <p>The new AI content Manager for hotels and restaurants.</p>
+        <p>The new AI Content Manager for hotels and restaurants.</p>
     </header>
+    <section id="features">
+        <h2>Why Choose Yoluko Media?</h2>
+        <ul class="feature-list">
+            <li>Generate and plan posts across Facebook, Instagram, X, and TripAdvisor.</li>
+            <li>Manage ads online with ease and efficiency.</li>
+            <li>Centralize messages, comments, and reviews with auto-reply functionality.</li>
+            <li>Analyze your performance and benchmark against competitors.</li>
+        </ul>
+    </section>
+    
     <section id="coming-soon">
-        <h2>Coming Soon</h2>
-        <p>Stay ahead in managing your social media content with the power of AI.</p>
-        <button id="subscribe-btn">Subscribe for Updates</button>
+        <h2>Stay Updated!</h2>
+        <div id="info-window">
+            <p>If you want to get updates, please send us a message.</p>
+            <div class="modal-content">
+                <form action="https://formspree.io/f/mkndqggk" method="POST">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" required> <!-- Updated name attribute -->
+                    
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" required> <!-- Updated name attribute -->
+        
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Interested in early access, updates, or have specific inquiries? Let us know here."></textarea>
+        
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+        
     </section>
     <footer>
         <p>Based in Lyon, France</p>
     </footer>
-
-    <div id="subscription-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Subscribe for Updates</h2>
-            <form action="https://formspree.io/f/mkndqggk" method="POST">
-                <label for="email">Your email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Your message:</label>
-                <textarea id="message" name="message" placeholder="Interested in early access, updates, or have specific inquiries? Let us know here."></textarea>
-                <input type="submit" value="Subscribe">
-            </form>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
