@@ -1,63 +1,214 @@
+/* Reset and Base */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5;
+    color: #333;
 }
 
+/* Header */
 header {
-    background-color: #0275d8;
+    background-image: linear-gradient(120deg, #0056b3, #00d2ff);
     color: #ffffff;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .logo {
-    width: 100px;
+    width: 150px;
+    margin-bottom: 20px;
 }
 
+/* Section */
 #coming-soon {
-    background-color: #f9f9f9;
-    padding: 50px 0;
+    background-color: #ffffff;
+    padding: 60px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer */
 footer {
     background-color: #333;
-    color: #ffffff;
+    color: #dddddd;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+/* Modal Content & Info Window Enhancements */
+#info-window {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns children to the start */
+    width: calc(100% - 40px); /* Adjust based on overall form width */
+    margin: 0 auto; /* Centers the content */
 }
 
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+form {
+    width: 100%; /* Ensures the form takes up the full width of its parent */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+/* Features Section */
+#features {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
 }
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.feature-list li {
+    text-align: left;
+    display: block;
+    margin: 0 auto;
+    padding-left: 20px;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+/* Adjusts label and input alignment */
+label {
+    display: block;
+    align-self: flex-start;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Ensure inputs and textarea are full width and modernized */
+input[type="text"], input[type="email"], textarea {
+    width: calc(100% - 40px); /* Adjusts the width to account for padding and margin */
+    padding: 15px; /* Adds padding inside the input fields */
+    margin: 8px 20px; /* Adds margin around inputs */
+    border-radius: 5px; /* Rounds the corners of the input fields */
+    border: 1px solid #ccc; /* Defines a border for the input fields */
+    box-sizing: border-box; /* Adjusts box-sizing to include padding and border in element's total width */
+    font-size: 1rem; /* Sets a standard font size */
+    color: #333; /* Sets the text color */
+}
+
+/* Specifically enlarging the textarea for 'Your Message' */
+textarea {
+    height: 150px; /* Adjust this value to increase the visible height */
+}
+
+/* Centering the submit button specifically with enhanced style */
+input[type="submit"] {
+    align-self: center; /* Centers the button */
+    width: auto; /* Allows the width to adjust based on content */
+    padding: 12px 45px; /* Adds padding for a larger click area */
+    border-radius: 25px; /* Rounds the corners of the button */
+    background-color: #007bff; /* Sets the button color */
+    color: #ffffff; /* Sets the text color to white for contrast */
+    font-size: 1rem; /* Sets the font size */
+    font-weight: 600; /* Increases the font weight for emphasis */
+    letter-spacing: 0.05em; /* Adds spacing between letters */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Adds a transition effect for interactions */
+    cursor: pointer; /* Changes the cursor to indicate the element is clickable */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Changes the button color on hover for feedback */
+    transform: translateY(-2px); /* Moves the button slightly up to simulate a button press */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increases the shadow for emphasis */
+}
+
+input[type="submit"]:active {
+    transform: translateY(1px); /* Moves the button slightly down to simulate being pressed */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adjusts the shadow to simulate depth */
+}
+
+/* Responsive Typography Adjustments */
+h1, h2, p {
+    margin: 0 0 20px 0;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .modal-content, form {
+        width: 90%; /* Allows for some margin on smaller screens */
+    }
+
+    header, #features, #coming-soon, footer {
+        padding: 20px; /* Adjusts padding for smaller screens */
+    }
+
+    .feature-list li::before {
+        left: 0; /* Adjusts bullet position for smaller screens */
+    }
+
+    /* Adjust font sizes for smaller screens for better readability */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2, p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Enhancements for form focus states */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Improving form accessibility */
+input[type="text"]:focus-visible, input[type="email"]:focus-visible, textarea:focus-visible {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.5);
+}
+
